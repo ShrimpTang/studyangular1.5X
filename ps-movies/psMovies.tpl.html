@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <td>name</td>
+        <td>vote</td>
+        <td>
+            操作
+        </td>
+    </tr>
+    <tr ng-repeat="m in vm.movies">
+        <td>{{ m.name }}</td>
+        <td>
+            <movie-vote value="m.vote"></movie-vote>
+        </td>
+        <td>
+            <button ng-click="vm.upVote(m)">+</button>
+            <button ng-click="vm.downVote(m)">-</button>
+        </td>
+    </tr>
+</table>
